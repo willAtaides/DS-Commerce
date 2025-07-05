@@ -17,7 +17,7 @@ public class User {
 
     @Column(unique = true)
     private String email;
-    private String phonne;
+    private String phone;
     private LocalDate birthDate;
     private String password;
 
@@ -29,12 +29,12 @@ public class User {
 
     }
 
-    public User(Long id, String password, String name, String email, String phonne, LocalDate birthDate) {
+    public User(Long id, String password, String name, String email, String phone, LocalDate birthDate) {
         this.id = id;
         this.password = password;
         this.name = name;
         this.email = email;
-        this.phonne = phonne;
+        this.phone = phone;
         this.birthDate = birthDate;
     }
 
@@ -62,12 +62,12 @@ public class User {
         this.email = email;
     }
 
-    public String getPhonne() {
-        return phonne;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhonne(String phonne) {
-        this.phonne = phonne;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public LocalDate getBirthDate() {
@@ -95,12 +95,12 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(id, user.id) && Objects.equals(name, user.name) && Objects.equals(email, user.email) && Objects.equals(phonne, user.phonne) && Objects.equals(birthDate, user.birthDate) && Objects.equals(password, user.password);
+        return Objects.equals(id, user.id) && Objects.equals(name, user.name) && Objects.equals(email, user.email) && Objects.equals(phone, user.phone) && Objects.equals(birthDate, user.birthDate) && Objects.equals(password, user.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, email, phonne, birthDate, password);
+        return Objects.hash(id, name, email, phone, birthDate, password);
     }
 
     @Override
@@ -109,7 +109,7 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", phonne='" + phonne + '\'' +
+                ", phonne='" + phone + '\'' +
                 ", birthDate=" + birthDate +
                 ", password='" + password + '\'' +
                 '}';
