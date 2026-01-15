@@ -17,6 +17,8 @@ import java.util.Optional;
 
 @Service
 public class OrderService {
+    @Autowired
+    private AuthService authService;
 
     @Autowired
     private OrderRepository repository;
@@ -35,7 +37,8 @@ public class OrderService {
         Optional<Order> result = repository.findById(id);
         Order order = result.orElseThrow(
                 () -> new ResouceNotFoundException("Recurso não encontrado"));
-       OrderDTO dto = new OrderDTO(order);
+        authService.validateSelfOrAdmin(order.getClient().getId());
+        OrderDTO dto = new OrderDTO(order);
         return dto;
     }
 

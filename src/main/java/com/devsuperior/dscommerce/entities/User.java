@@ -89,6 +89,7 @@ public class User implements UserDetails {
         return roles;
     }
 
+
     public String getPassword() {
         return password;
     }
