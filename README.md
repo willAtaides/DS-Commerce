@@ -58,7 +58,7 @@ O projeto explora diferentes tipos de relacionamentos do JPA/Hibernate:
 ---
 ## Casos de Uso
 
-![Diagrama de Casos de Uso](assets/caso-de-uso.png)
+![Diagrama de Casos de Uso](assets/casodeuso.png)
 
 ## Segurança e Controle de Acesso
 
@@ -117,7 +117,6 @@ Além disso, o sistema aplica **proteção de recursos por usuário** (*self acc
 ### Pré-requisitos
 - JDK 17 ou superior
 - Maven
-- Docker (opcional, para PostgreSQL)
 
 ### Passos
 
